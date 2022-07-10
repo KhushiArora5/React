@@ -32,12 +32,12 @@ function Counter()
           console.log(error);
         }
     };
-
+//for tailwindcss we use className="property"
     return (
     <div>
     COUNTER APP
         <div>
-        <h2>{count}</h2> //for tailwindcss we use className="property"
+        <h2>{count}</h2> 
         </div>
         <div>
             <button onClick = {() => {
