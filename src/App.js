@@ -1,11 +1,12 @@
 import './App.css';
 import Counter from './counter.js';
-
+import Forms from './forms';
 
 function App() {
   return (
     <div className="App">
       <Counter />
+      <Forms />
     </div>
   );
 }

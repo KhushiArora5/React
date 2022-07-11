@@ -5,33 +5,13 @@
 //hooks used to change the state of the component
 
 //PROJECT TO MAKE:incease or decrese the no.
-import React, {useState, useRef, useEffect} from "react";
-import axios from "axios"; //axios for fetching the data 
-//import {Button,Row,Col} from 'react-bootstrap';
+import React, {useState} from "react";
+
 function Counter()
 {
     //useState
     const [count, setCount] = useState(0);
 
-    //useRef
-    const newref = useRef();
-
-    //api
-    const [data, setData] = useState(0);
-
-    const Handle = async () => //for promises(success or unsuccess)
-    {
-        try
-        {
-            const val = (await axios.get("https://randomuser.me/api/")).data
-            .results[0].name.first;
-          console.log(val);
-          setData(val);
-        } catch (error) 
-        {
-          console.log(error);
-        }
-    };
 //for tailwindcss we use className="property"
     return (
     <div>
@@ -46,19 +26,6 @@ function Counter()
             <button onClick = {() => {
                 setCount(count-1);
             }}>Decrese</button>
-        </div>
-        <br />
-        <div>
-        <input ref={newref} placeholder="value" />
-        <button onClick = {() => {
-            newref.current.focus();
-            }}>Focus</button>
-        </div>
-        <br />
-        <div>
-            <h2>Data</h2>
-            <h3>{data}</h3>
-            <button onClick = {Handle}>Handle</button>
         </div>
     </div>
     );
