@@ -1,13 +1,26 @@
 import './App.css';
 import Counter from './counter.js';
 import Forms from './forms';
+import { BrowserRouter as Router,Routes,Route} from "react-router-dom";
+import Home from './homepage';
+import Apple from './apple';
+import Mango from './mango';
 
 function App() {
   return (
     <div className="App">
       <Counter />
       <Forms />
+    <div>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home />}></Route>
+        <Route exact path="/apple" element={<Apple />}></Route>
+        <Route exact path="/mango" element={<Mango />}></Route>
+      </Routes>
+    </Router>
     </div>
+  </div>
   );
 }
 

@@ -11,7 +11,7 @@ import axios from "axios"; //axios for fetching the data
 function Forms()
 {
     //useState
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(0); //to monitor the state of the var.
     //function is to be declared in main function
     // const Increase()=>
     // {
